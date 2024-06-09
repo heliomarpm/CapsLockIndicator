@@ -434,6 +434,9 @@ Do you want to reset all settings now?</value>
     <value>&amp;Restart</value>
     <comment>Generic label for Restart button</comment>
   </data>
+  <data name="restartApplication" xml:space="preserve">
+    <value>Restart application</value>
+  </data>
   <data name="saveAndCloseButton" xml:space="preserve">
     <value>&amp;Save &amp;&amp; close</value>
     <comment>The caption for the "Save &amp; Close" button. The character after the "&amp;" is the hotkey that is used with the ALT key. Use two "&amp;" to display a "&amp;" character</comment>

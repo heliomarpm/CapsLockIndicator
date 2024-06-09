@@ -686,6 +686,7 @@ namespace CapsLockIndicatorV3
             tabControl1.DarkMode = dark;
 
             ControlScheduleSetDarkMode(checkForUpdatesButton, dark);
+            ControlScheduleSetDarkMode(restartApplicationButton, dark);
             ControlScheduleSetDarkMode(exitApplication, dark);
             ControlScheduleSetDarkMode(hideWindow, dark);
             ControlScheduleSetDarkMode(enableNumInd, dark);
@@ -816,6 +817,7 @@ namespace CapsLockIndicatorV3
             showNoNotification.Text = strings.showNoNotification;
             hideWindow.Text = strings.hideWindow;
             exitApplication.Text = strings.exitApplication;
+            restartApplicationButton.Text = strings.restartApplication;
             checkForUpdatesButton.Text = strings.checkForUpdates;
             startonlogonCheckBox.Text = strings.startOnLogon;
             generalIcon.BalloonTipText = strings.generalIconBalloonText;
@@ -1135,6 +1137,7 @@ namespace CapsLockIndicatorV3
                 Exit();
             }
         }
+
         void HideWindowClick(object sender, EventArgs e)
         {
             HideForm();
@@ -1558,6 +1561,13 @@ namespace CapsLockIndicatorV3
         private void cbPersistent_CheckedChanged(object sender, EventArgs e)
         {
             SettingsManager.Set("persistentOverlay" + (sender as BetterCheckBox).Tag.ToString(), (sender as BetterCheckBox).Checked);
+        }
+
+        private void restartApplicationButton_Click(object sender, EventArgs e)
+        {
+            string applicationPath = Application.ExecutablePath;
+            Application.Exit();
+            Process.Start(applicationPath);
         }
     }
 }

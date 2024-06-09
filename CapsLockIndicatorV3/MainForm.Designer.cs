@@ -73,6 +73,7 @@ namespace CapsLockIndicatorV3
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.hideWindow = new System.Windows.Forms.Button();
+            this.restartApplicationButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -242,7 +243,7 @@ namespace CapsLockIndicatorV3
             this.iconsGroup.Location = new System.Drawing.Point(12, 12);
             this.iconsGroup.Margin = new System.Windows.Forms.Padding(12, 12, 3, 3);
             this.iconsGroup.Name = "iconsGroup";
-            this.iconsGroup.Size = new System.Drawing.Size(292, 299);
+            this.iconsGroup.Size = new System.Drawing.Size(292, 207);
             this.iconsGroup.TabIndex = 0;
             this.iconsGroup.TabStop = false;
             this.iconsGroup.Text = "showIconsFor";
@@ -298,7 +299,7 @@ namespace CapsLockIndicatorV3
             this.indicatorGroup.Location = new System.Drawing.Point(310, 12);
             this.indicatorGroup.Margin = new System.Windows.Forms.Padding(3, 12, 12, 3);
             this.indicatorGroup.Name = "indicatorGroup";
-            this.indicatorGroup.Size = new System.Drawing.Size(292, 299);
+            this.indicatorGroup.Size = new System.Drawing.Size(292, 207);
             this.indicatorGroup.TabIndex = 1;
             this.indicatorGroup.TabStop = false;
             this.indicatorGroup.Text = "showNotificationWhen";
@@ -377,7 +378,7 @@ namespace CapsLockIndicatorV3
             this.aboutPanel.Controls.Add(this.aboutPanelTopBorder);
             this.aboutPanel.Controls.Add(this.aboutText);
             this.aboutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aboutPanel.Location = new System.Drawing.Point(0, 628);
+            this.aboutPanel.Location = new System.Drawing.Point(0, 444);
             this.aboutPanel.Margin = new System.Windows.Forms.Padding(0);
             this.aboutPanel.Name = "aboutPanel";
             this.aboutPanel.Size = new System.Drawing.Size(614, 65);
@@ -462,7 +463,7 @@ namespace CapsLockIndicatorV3
             this.checkForUpdatesButton.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.checkForUpdatesButton, 2);
             this.checkForUpdatesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkForUpdatesButton.Location = new System.Drawing.Point(27, 63);
+            this.checkForUpdatesButton.Location = new System.Drawing.Point(27, 93);
             this.checkForUpdatesButton.Name = "checkForUpdatesButton";
             this.checkForUpdatesButton.Size = new System.Drawing.Size(262, 24);
             this.checkForUpdatesButton.TabIndex = 9;
@@ -500,7 +501,7 @@ namespace CapsLockIndicatorV3
             this.checkForUpdatedCheckBox.Checked = true;
             this.checkForUpdatedCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkForUpdatedCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkForUpdatedCheckBox.Location = new System.Drawing.Point(6, 67);
+            this.checkForUpdatedCheckBox.Location = new System.Drawing.Point(6, 97);
             this.checkForUpdatedCheckBox.Name = "checkForUpdatedCheckBox";
             this.checkForUpdatedCheckBox.Size = new System.Drawing.Size(15, 15);
             this.checkForUpdatedCheckBox.TabIndex = 12;
@@ -577,7 +578,7 @@ namespace CapsLockIndicatorV3
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(614, 693);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(614, 509);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
             // flowLayoutPanel1
@@ -588,10 +589,10 @@ namespace CapsLockIndicatorV3
             this.flowLayoutPanel1.Controls.Add(this.hideOnStartupCheckBox);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 317);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 225);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(12, 3, 3, 9);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(292, 302);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(292, 210);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -603,19 +604,21 @@ namespace CapsLockIndicatorV3
             this.tableLayoutPanel2.Controls.Add(this.localeComboBox, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.hideWindow, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.exitApplication, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.checkForUpdatesButton, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.checkForUpdatedCheckBox, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.checkForUpdatedCheckBox, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.checkForUpdatesButton, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.restartApplicationButton, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(310, 317);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(310, 225);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 3, 12, 9);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(292, 302);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(292, 210);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // hideWindow
@@ -630,6 +633,20 @@ namespace CapsLockIndicatorV3
             this.hideWindow.Text = "hideWindow";
             this.hideWindow.UseVisualStyleBackColor = true;
             this.hideWindow.Click += new System.EventHandler(this.HideWindowClick);
+            // 
+            // restartApplicationButton
+            // 
+            this.restartApplicationButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.restartApplicationButton.AutoSize = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.restartApplicationButton, 2);
+            this.restartApplicationButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.restartApplicationButton.Location = new System.Drawing.Point(27, 63);
+            this.restartApplicationButton.Name = "restartApplicationButton";
+            this.restartApplicationButton.Size = new System.Drawing.Size(262, 24);
+            this.restartApplicationButton.TabIndex = 14;
+            this.restartApplicationButton.Text = "restartApplication";
+            this.restartApplicationButton.UseVisualStyleBackColor = true;
+            this.restartApplicationButton.Click += new System.EventHandler(this.restartApplicationButton_Click);
             // 
             // label1
             // 
@@ -1276,7 +1293,7 @@ namespace CapsLockIndicatorV3
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(292, 97);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
@@ -1329,7 +1346,7 @@ namespace CapsLockIndicatorV3
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(292, 100);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
@@ -1392,7 +1409,7 @@ namespace CapsLockIndicatorV3
             this.tabPage3.Controls.Add(this.tableLayoutPanel1);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(614, 693);
+            this.tabPage3.Size = new System.Drawing.Size(614, 509);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Tag = "340";
             this.tabPage3.Text = "general";
@@ -1438,7 +1455,7 @@ namespace CapsLockIndicatorV3
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(614, 693);
+            this.tabPage2.Size = new System.Drawing.Size(614, 509);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Tag = "190";
             this.tabPage2.Text = "advancedOptions";
@@ -1455,7 +1472,7 @@ namespace CapsLockIndicatorV3
             this.flowLayoutPanel1b.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1b.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1b.Name = "flowLayoutPanel1b";
-            this.flowLayoutPanel1b.Size = new System.Drawing.Size(608, 687);
+            this.flowLayoutPanel1b.Size = new System.Drawing.Size(608, 503);
             this.flowLayoutPanel1b.TabIndex = 0;
             // 
             // darkModeCheckBox
@@ -1697,5 +1714,6 @@ namespace CapsLockIndicatorV3
         private BetterCheckBox cbPersistentCapsOn;
         private BetterCheckBox cbPersistentScrollOff;
         private BetterCheckBox cbPersistentScrollOn;
+        private System.Windows.Forms.Button restartApplicationButton;
     }
 }
